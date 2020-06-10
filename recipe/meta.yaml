@@ -1,4 +1,4 @@
-{% set version = "1.2-5" %}
+{% set version = "1.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SOMbrero_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SOMbrero/SOMbrero_{{ version }}.tar.gz
-  sha256: ec3740627f2403365ac23c461f5859c39ad8c47a6a66579c1d3582735d339969
+  sha256: d0d9b73f094427c772745e3c45077a9ea8b6bf7e10656e552b5e064bbcbabaea
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -25,18 +25,22 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-rcolorbrewer
+    - r-ggplot2
+    - r-ggwordcloud
     - r-igraph >=1.0
+    - r-interp
+    - r-metr
     - r-scatterplot3d
     - r-shiny
-    - r-wordcloud
   run:
     - r-base
-    - r-rcolorbrewer
+    - r-ggplot2
+    - r-ggwordcloud
     - r-igraph >=1.0
+    - r-interp
+    - r-metr
     - r-scatterplot3d
     - r-shiny
-    - r-wordcloud
 
 test:
   commands:
@@ -45,13 +49,12 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=SOMbrero
-  license: GPL (>= 2)
-  summary: The stochastic (also called on-line) version of the Self-Organising Map (SOM) algorithm is provided. Different versions of the algorithm are implemented,
-    for numeric and relational data and for contingency tables as described, respectively, in Kohonen (2001) <isbn:3-540-67921-9>, Olteanu & Villa-Vialaneix (2005)
-    <doi:10.1016/j.neucom.2013.11.047> and Cottrell et al (2004) <doi:10.1016/j.neunet.2004.07.010>. The package also contains many plotting features (to help the
-    user interpret the results) and a graphical user interface based on 'shiny'.
+  license: GPL-2.0-or-later
+  summary: The stochastic (also called on-line) version of the Self-Organising Map (SOM) algorithm is provided. Different versions of the algorithm are implemented, for numeric and relational data and for contingency tables as described, respectively, in Kohonen (2001) <isbn:3-540-67921-9>, Olteanu & Villa-Vialaneix (2005)
+    <doi:10.1016/j.neucom.2013.11.047> and Cottrell et al (2004) <doi:10.1016/j.neunet.2004.07.010>. The package also contains many plotting features (to help the user interpret the results) and a graphical user interface based on 'shiny'.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
