@@ -5,7 +5,7 @@ Home: https://CRAN.R-project.org/package=SOMbrero
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: The stochastic (also called on-line) version of the Self-Organising Map (SOM) algorithm is provided. Different versions of the algorithm are implemented, for numeric and relational data and for contingency tables as described, respectively, in Kohonen (2001) <isbn:3-540-67921-9>, Olteanu & Villa-Vialaneix (2005) <doi:10.1016/j.neucom.2013.11.047> and Cottrell et al (2004) <doi:10.1016/j.neunet.2004.07.010>. The package also contains many plotting features (to help the user interpret the results) and a graphical user interface based on 'shiny'.
 
