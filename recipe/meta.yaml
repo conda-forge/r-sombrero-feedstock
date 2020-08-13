@@ -29,6 +29,7 @@ requirements:
     - r-ggwordcloud
     - r-igraph >=1.0
     - r-interp
+    - r-markdown
     - r-metr
     - r-scatterplot3d
     - r-shiny
@@ -38,6 +39,7 @@ requirements:
     - r-ggwordcloud
     - r-igraph >=1.0
     - r-interp
+    - r-markdown
     - r-metr
     - r-scatterplot3d
     - r-shiny
