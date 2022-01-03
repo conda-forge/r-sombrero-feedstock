@@ -1,4 +1,4 @@
-{% set version = "1.3-1" %}
+{% set version = "1.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SOMbrero_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SOMbrero/SOMbrero_{{ version }}.tar.gz
-  sha256: ec4d5fca607a2ea3a5976bf19290321aa321b243e56c8654b2a90df7d55a7f20
+  sha256: b1fd8a20efb7d57323173bb683830f1bb2bd5e899868758a3384366c6ed21dc3
 
 build:
   merge_build_host: true  # [win]
