@@ -1,4 +1,4 @@
-{% set version = "1.4-2" %}
+{% set version = "1.4-3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/SOMbrero_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/SOMbrero/SOMbrero_{{ version }}.tar.gz
-  sha256: f652dabe8a1ff8e1da50723059e8195b64cfb6a64849b448331873ae066f7c95
+  sha256: c09d93226db3b1693bea417419829fda812a1da211c5d3c157bd72c5be048bd0
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
